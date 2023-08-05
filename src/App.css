@@ -285,6 +285,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner img {
   animation: updown 3s linear infinite;
 }
+.custom-link{
+  color: #fff;
+  text-decoration: none;
+}
+.custom-link:hover{
+  text-decoration: underline;
+}
 @keyframes updown {
     0% {
         transform: translateY(-20px);

@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/cartography-1801579.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -15,7 +15,7 @@ export const Banner = () => {
   const toRotate = [
     "Computer Science Student",
     "Web Developer",
-    "UI/UX Designer",
+    "Minecraft Player",
   ];
   const period = 2000;
 
@@ -76,7 +76,7 @@ export const Banner = () => {
                       dataPeriod="1000"
                       data-rotate='[ "Computer Science Student",
                       "Web Developer",
-                      "UI/UX Designer", ]'
+                      "Minecraft Player"]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
@@ -89,7 +89,14 @@ export const Banner = () => {
                     in working hard and setting high standards for myself.
                   </p>
                   <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
+                    Download My CV
+                    <a
+                      href="https://drive.google.com/file/d/1rJxSNQeceMBy1Oash3_B2B38A-C3Qo-S/view?usp=sharing"
+                      target="blank"
+                      className="custom-link"
+                    >
+                      <ArrowRightCircle size={25} />
+                    </a>
                   </button>
                 </div>
               )}

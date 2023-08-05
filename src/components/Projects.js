@@ -1,8 +1,6 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import coming_soon from "../assets/img/coming_soon.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -10,34 +8,34 @@ import TrackVisibility from "react-on-screen";
 export const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
+      title: "Worth The Wait",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: coming_soon,
     },
     {
-      title: "Business Startup",
+      title: "Worth The Wait",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: coming_soon,
     },
     {
-      title: "Business Startup",
+      title: "Worth The Wait",
       description: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: coming_soon,
     },
     {
-      title: "Business Startup",
+      title: "Worth The Wait",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: coming_soon,
     },
     {
-      title: "Business Startup",
+      title: "Worth The Wait",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: coming_soon,
     },
     {
-      title: "Business Startup",
+      title: "Worth The Wait",
       description: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: coming_soon,
     },
   ];
 
@@ -55,11 +53,13 @@ export const Projects = () => {
                 >
                   <h2>Projects</h2>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    Each project represents a unique journey, where I've
+                    explored cutting-edge technologies, collaborated with
+                    diverse teams, and unleashed my creativity to overcome
+                    challenges. From software solutions that streamline
+                    processes to engineering marvels that push the boundaries of
+                    what's possible, my portfolio showcases my commitment to
+                    making a meaningful impact through technology and design.
                   </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
@@ -90,7 +90,7 @@ export const Projects = () => {
                           })}
                         </Row>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="section">
+                      <Tab.Pane eventKey="second">
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Cumque quam, quod neque provident velit, rem
