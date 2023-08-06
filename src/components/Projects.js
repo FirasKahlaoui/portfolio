@@ -92,20 +92,25 @@ export const Projects = () => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
+                          While my portfolio may currently be in its early
+                          stages, my passion and determination to make a
+                          difference in the tech world are stronger than ever. I
+                          am excited to be on the cusp of greatness and embrace
+                          each step of this transformative journey. Instead of
+                          being discouraged by the absence of projects, I view
+                          it as an opportunity to explore new possibilities and
+                          identify areas where I can truly make a unique impact
                         </p>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
+                          As an aspiring technologist, I am eager to embark on a
+                          journey of innovation and creativity. While I may not
+                          have a portfolio of projects just yet, my passion for
+                          technology and design is unwavering. I see every
+                          challenge as an opportunity to learn and grow, and I
+                          am committed to making a meaningful impact through my
+                          work.
                         </p>
                       </Tab.Pane>
                     </Tab.Content>
