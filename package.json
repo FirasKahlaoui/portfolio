@@ -31,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "send-email": "node sendEmail.js" // This is the script you want to add for Nodemailer
+    "send-email": "node sendEmail.js"
   },
   "eslintConfig": {
     "extends": [
