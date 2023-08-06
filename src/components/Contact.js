@@ -25,6 +25,19 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check if all required fields are filled before submitting
+    const requiredFields = ["firstName","email", "message"];
+    const isFormValid = requiredFields.every(
+      (field) => formDetails[field].trim() !== ""
+    );
+    if (!isFormValid) {
+      setStatus({
+        success: false,
+        message: "Please fill out all required fields.",
+      });
+      return;
+    }
     setButtonText("Sending...");
 
     try {
@@ -39,6 +52,10 @@ export const Contact = () => {
       // Reset the form and show success message if the email was sent successfully
       setFormDetails(formInitialDetails);
       setStatus({ success: true, message: "Message sent successfully" });
+      // Hide the success message after 3 seconds
+      setTimeout(() => {
+        setStatus({});
+      }, 3000);
     } catch (error) {
       // Show error message if something went wrong
       setStatus({

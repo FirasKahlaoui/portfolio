@@ -3,6 +3,8 @@ import css from "../assets/img/css-svgrepo-com.svg";
 import js from "../assets/img/js-svgrepo-com.svg";
 import react from "../assets/img/react-svgrepo-com.svg";
 import mongoDB from "../assets/img/mongo-svgrepo-com.svg";
+import node from "../assets/img/nodejs-1-logo-svgrepo-com.svg";
+import mysql from "../assets/img/mysql-logo-svgrepo-com.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -65,8 +67,16 @@ export const Skills = () => {
                   <h5>React</h5>
                 </div>
                 <div className="item">
+                  <img src={node} alt="" />
+                  <h5>NodeJS</h5>
+                </div>
+                <div className="item">
                   <img src={mongoDB} alt="" />
                   <h5>MongoDB</h5>
+                </div>
+                <div className="item">
+                  <img src={mysql} alt="" />
+                  <h5>MySQL</h5>
                 </div>
               </Carousel>
             </div>
