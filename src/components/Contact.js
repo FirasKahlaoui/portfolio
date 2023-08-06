@@ -27,7 +27,7 @@ export const Contact = () => {
     e.preventDefault();
 
     // Check if all required fields are filled before submitting
-    const requiredFields = ["firstName","email", "message"];
+    const requiredFields = ["firstName", "email", "message"];
     const isFormValid = requiredFields.every(
       (field) => formDetails[field].trim() !== ""
     );
