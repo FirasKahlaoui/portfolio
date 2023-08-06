@@ -41,7 +41,7 @@ export const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      await fetch("http://localhost:5000/contact", {
+      await fetch("https://ifiras.pages.dev/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
