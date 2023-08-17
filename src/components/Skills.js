@@ -1,6 +1,6 @@
 import html from "../assets/img/html-5-svgrepo-com.svg";
 import css from "../assets/img/css-svgrepo-com.svg";
-import js from "../assets/img/js-svgrepo-com.svg";
+import js from "../assets/img/javascript-1.svg";
 import react from "../assets/img/react-svgrepo-com.svg";
 import mongoDB from "../assets/img/mongo-svgrepo-com.svg";
 import node from "../assets/img/nodejs-1-logo-svgrepo-com.svg";
@@ -11,7 +11,6 @@ import c from "../assets/img/icons8-c.svg";
 import java from "../assets/img/icons8-java.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
@@ -31,7 +30,7 @@ export const Skills = () => {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 3,
+      items: 2,
     },
   };
 
@@ -103,7 +102,11 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="" />
+      <img
+        className="background-image-left"
+        src={colorSharp}
+        alt="colorSharp"
+      />
     </section>
   );
 };
