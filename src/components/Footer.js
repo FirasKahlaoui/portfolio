@@ -4,6 +4,7 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import navIcon4 from "../assets/img/twitter-svgrepo-com.svg";
+import navIcon5 from "../assets/img/github-mark.svg";
 
 export const Footer = () => {
   return (
@@ -39,8 +40,11 @@ export const Footer = () => {
               <a href="https://twitter.com/firas_kahlaoui" target="blank">
                 <img src={navIcon4} alt="Icon" title="Twitter" />
               </a>
+              <a href="https://github.com/FirasKahlaoui" target="blank">
+                  <img src={navIcon5} alt="" title="GitHub" />
+                </a>
             </div>
-            <p>©️ Copyright 2023. All Rights Reserved</p>
+            <p></p>
           </Col>
         </Row>
       </Container>

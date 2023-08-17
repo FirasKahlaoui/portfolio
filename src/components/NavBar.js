@@ -5,6 +5,7 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import navIcon4 from "../assets/img/twitter-svgrepo-com.svg";
+import navIcon5 from "../assets/img/github-mark.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -61,9 +62,9 @@ export const NavBar = () => {
                 Skills
               </Nav.Link>
               <Nav.Link
-                href="#projects"
+                href="#project"
                 className={
-                  activeLink === "projects"
+                  activeLink === "project"
                     ? "active navbar-link"
                     : "navbar-link"
                 }
@@ -94,6 +95,9 @@ export const NavBar = () => {
                 </a>
                 <a href="https://twitter.com/firas_kahlaoui" target="blank">
                   <img src={navIcon4} alt="" title="Twitter" />
+                </a>
+                <a href="https://github.com/FirasKahlaoui" target="blank">
+                  <img src={navIcon5} alt="" title="GitHub" />
                 </a>
               </div>
               <HashLink to="#connect">
