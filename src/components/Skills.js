@@ -5,6 +5,10 @@ import react from "../assets/img/react-svgrepo-com.svg";
 import mongoDB from "../assets/img/mongo-svgrepo-com.svg";
 import node from "../assets/img/nodejs-1-logo-svgrepo-com.svg";
 import mysql from "../assets/img/mysql-logo-svgrepo-com.svg";
+import python from "../assets/img/icons8-python.svg";
+import php from "../assets/img/icons8-php.svg";
+import c from "../assets/img/icons8-c.svg";
+import java from "../assets/img/icons8-java.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -19,15 +23,15 @@ export const Skills = () => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 5,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 3,
     },
   };
 
@@ -51,32 +55,48 @@ export const Skills = () => {
                 className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
-                  <img src={html} alt="" />
+                  <img src={html} alt="HTML" />
                   <h5>HTML 5</h5>
                 </div>
                 <div className="item">
-                  <img src={css} alt="" />
+                  <img src={css} alt="CSS" />
                   <h5>CSS 3</h5>
                 </div>
                 <div className="item">
-                  <img src={js} alt="" />
+                  <img src={js} alt="JavaScript" />
                   <h5>Java Script</h5>
                 </div>
                 <div className="item">
-                  <img src={react} alt="" />
+                  <img src={react} alt="React" />
                   <h5>React</h5>
                 </div>
                 <div className="item">
-                  <img src={node} alt="" />
+                  <img src={node} alt="Node" />
                   <h5>NodeJS</h5>
                 </div>
                 <div className="item">
-                  <img src={mongoDB} alt="" />
+                  <img src={mongoDB} alt="mongoDB" />
                   <h5>MongoDB</h5>
                 </div>
                 <div className="item">
-                  <img src={mysql} alt="" />
+                  <img src={mysql} alt="MySQL" />
                   <h5>MySQL</h5>
+                </div>
+                <div className="item">
+                  <img src={php} alt="PHP" />
+                  <h5>PHP</h5>
+                </div>
+                <div className="item">
+                  <img src={python} alt="Python" />
+                  <h5>Python</h5>
+                </div>
+                <div className="item">
+                  <img src={c} alt="C" />
+                  <h5>C</h5>
+                </div>
+                <div className="item">
+                  <img src={java} alt="Java" />
+                  <h5>Java</h5>
                 </div>
               </Carousel>
             </div>
