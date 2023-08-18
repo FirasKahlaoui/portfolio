@@ -31,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "send-email": "node sendEmail.js"
+    "send-email": "node nodemailer.js"
   },
   "eslintConfig": {
     "extends": [
