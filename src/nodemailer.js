@@ -12,19 +12,22 @@ app.use(
   })
 );
 
+// Create a Nodemailer transporter
+const transporter = nodemailer.createTransport({
+  service: "hotmail",
+  auth: {
+    user: "kahlaoui.look@outlook.fr",
+    pass: "myMicrosoftAccount5@#",
+  },
+});
+
+// Import the sendEmail function
+const sendEmail = require("./nodemailer"); // Update the path to your nodemailer.js file
+
 app.post("/contact", async (req, res) => {
   const { firstName, lastName, email, phone, message } = req.body;
 
   try {
-    // Create a Nodemailer transporter
-    const transporter = nodemailer.createTransport({
-      service: "hotmail",
-      auth: {
-        user: "kahlaoui.look@outlook.fr",
-        pass: "myMicrosoftAccount5@#",
-      },
-    });
-
     // Compose the email
     const emailContent = `
       First Name: ${firstName}
@@ -34,8 +37,9 @@ app.post("/contact", async (req, res) => {
       Message: ${message}
     `;
 
-    // Send the email
-    await transporter.sendMail({
+    // Send the email using Nodemailer
+    await sendEmail({
+      transporter, // Pass the transporter object
       from: "kahlaoui.look@outlook.fr",
       to: "kahlaouifiras2017@gmail.com",
       subject: "New Contact Form Submission",
