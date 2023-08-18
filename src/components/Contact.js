@@ -41,21 +41,29 @@ export const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      await fetch("https://ifiras.pages.dev/#contact", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formDetails),
-      });
+      // Create a query string from the form data
+      const queryString = Object.entries(formDetails)
+        .map(
+          ([key, value]) =>
+            `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+        )
+        .join("&");
 
-      // Reset the form and show success message if the email was sent successfully
-      setFormDetails(formInitialDetails);
-      setStatus({ success: true, message: "Message sent successfully" });
-      // Hide the success message after 3 seconds
-      setTimeout(() => {
-        setStatus({});
-      }, 3000);
+      const response = await fetch(
+        `https://ifiras.pages.dev/contact?${queryString}`
+      );
+
+      if (response.ok) {
+        // Reset the form and show success message if the email was sent successfully
+        setFormDetails(formInitialDetails);
+        setStatus({ success: true, message: "Message sent successfully" });
+        // Hide the success message after 3 seconds
+        setTimeout(() => {
+          setStatus({});
+        }, 3000);
+      } else {
+        throw new Error("Request failed");
+      }
     } catch (error) {
       // Show error message if something went wrong
       setStatus({
