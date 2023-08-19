@@ -41,17 +41,13 @@ export const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      // Create a query string from the form data
-      const queryString = Object.entries(formDetails)
-        .map(
-          ([key, value]) =>
-            `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
-        )
-        .join("&");
-
-      const response = await fetch(
-        `https://ifiras.pages.dev/contact?${queryString}`
-      );
+      const response = await fetch("https://ifiras.pages.dev/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formDetails),
+      });
 
       if (response.ok) {
         // Reset the form and show success message if the email was sent successfully
