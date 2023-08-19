@@ -102,6 +102,8 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
+                          name="firstName"
+                          id="firstName"
                           value={formDetails.firstName}
                           placeholder="First Name"
                           onChange={(e) =>
@@ -112,7 +114,9 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          value={formDetails.lasttName}
+                          name="lastName"
+                          id="lastName"
+                          value={formDetails.lastName}
                           placeholder="Last Name"
                           onChange={(e) =>
                             onFormUpdate("lastName", e.target.value)
@@ -122,6 +126,8 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="email"
+                          name="email"
+                          id="email"
                           value={formDetails.email}
                           placeholder="Email Address"
                           onChange={(e) =>
@@ -132,6 +138,8 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="tel"
+                          name="phone"
+                          id="phone"
                           value={formDetails.phone}
                           placeholder="Phone No."
                           onChange={(e) =>
@@ -142,6 +150,8 @@ export const Contact = () => {
                       <Col size={12} className="px-1">
                         <textarea
                           rows="6"
+                          name="message"
+                          id="message"
                           value={formDetails.message}
                           placeholder="Message"
                           onChange={(e) =>
