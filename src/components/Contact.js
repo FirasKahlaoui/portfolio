@@ -41,13 +41,15 @@ export const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      const response = await fetch("https://ifiras.pages.dev/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formDetails),
-      });
+      const response = await fetch(
+        `https://ifiras.pages.dev/contact?firstName=${formDetails.firstName}&lastName=${formDetails.lastName}&email=${formDetails.email}&phone=${formDetails.phone}&message=${formDetails.message}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.ok) {
         // Reset the form and show success message if the email was sent successfully
