@@ -42,7 +42,7 @@ app.post("/contact", async (req, res) => {
       transporter, // Pass the transporter object
       from: "kahlaoui.look@outlook.fr",
       to: "kahlaouifiras2017@gmail.com",
-      subject: "New Contact Form Submission",
+      subject: "New Contact From Your Website",
       text: emailContent,
     });
 
