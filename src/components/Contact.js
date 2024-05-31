@@ -4,7 +4,7 @@ import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc } from "firebase/firestore"; 
+import { getDatabase, ref, push } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -13,12 +13,11 @@ const firebaseConfig = {
   projectId: process.env.REACT_APP_PROJECT_ID,
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID
+  appId: process.env.REACT_APP_APP_ID,
 };
 
-// Initialize Firebase and Firestore
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const db = getDatabase(app);
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -42,7 +41,6 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if all required fields are filled before submitting
     const requiredFields = ["firstName", "email", "message"];
     const isFormValid = requiredFields.every(
       (field) => formDetails[field].trim() !== ""
@@ -57,32 +55,29 @@ export const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      // Add form data to Firestore
-      await addDoc(collection(db, "contacts"), {
+      await push(ref(db, "contacts"), {
         firstName: formDetails.firstName,
         lastName: formDetails.lastName,
         email: formDetails.email,
         phone: formDetails.phone,
         message: formDetails.message,
-        timestamp: new Date()
+        timestamp: new Date().toISOString(),
       });
 
-      // Reset the form and show success message if the data was saved successfully
       setFormDetails(formInitialDetails);
       setStatus({ success: true, message: "Message sent successfully" });
-      // Hide the success message after 3 seconds
+      setButtonText("Send");
+
       setTimeout(() => {
         setStatus({});
       }, 3000);
     } catch (error) {
-      // Show error message if something went wrong
       setStatus({
         success: false,
         message: "Something went wrong, please try again later.",
       });
+      setButtonText("Send");
     }
-
-    setButtonText("Send");
   };
 
   return (
