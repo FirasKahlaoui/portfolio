@@ -2,20 +2,23 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import coming_soon from "../assets/img/coming_soon.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import heart from "../assets/img/heart.png";
+import grade from "../assets/img/Grade Calc.png"
+
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "Worth The Wait",
-      description: "Design & Development",
-      imgUrl: coming_soon,
+      title: "Grade Claculator",
+      description: "React & HTML/CSS",
+      imgUrl: grade,
     },
     {
-      title: "Worth The Wait",
-      description: "Design & Development",
-      imgUrl: coming_soon,
+      title: "Heart Disease Prediction",
+      description: "Python & Machine Learning",
+      imgUrl: heart,
     },
     {
       title: "Worth The Wait",
