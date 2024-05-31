@@ -3,7 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc } from "firebase/firestore"; 
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -14,6 +15,10 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID
 };
+
+// Initialize Firebase and Firestore
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -52,27 +57,23 @@ export const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      const response = await fetch(
-        `https://ifiras.pages.dev/contact?firstName=${formDetails.firstName}&lastName=${formDetails.lastName}&email=${formDetails.email}&phone=${formDetails.phone}&message=${formDetails.message}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      // Add form data to Firestore
+      await addDoc(collection(db, "contacts"), {
+        firstName: formDetails.firstName,
+        lastName: formDetails.lastName,
+        email: formDetails.email,
+        phone: formDetails.phone,
+        message: formDetails.message,
+        timestamp: new Date()
+      });
 
-      if (response.ok) {
-        // Reset the form and show success message if the email was sent successfully
-        setFormDetails(formInitialDetails);
-        setStatus({ success: true, message: "Message sent successfully" });
-        // Hide the success message after 3 seconds
-        setTimeout(() => {
-          setStatus({});
-        }, 3000);
-      } else {
-        throw new Error("Request failed");
-      }
+      // Reset the form and show success message if the data was saved successfully
+      setFormDetails(formInitialDetails);
+      setStatus({ success: true, message: "Message sent successfully" });
+      // Hide the success message after 3 seconds
+      setTimeout(() => {
+        setStatus({});
+      }, 3000);
     } catch (error) {
       // Show error message if something went wrong
       setStatus({
