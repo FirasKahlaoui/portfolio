@@ -3,7 +3,8 @@ import { ProjectCard } from "./ProjectCard";
 import coming_soon from "../assets/img/coming_soon.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import heart from "../assets/img/heart.png";
-import grade from "../assets/img/Grade Calc.png"
+import grade from "../assets/img/Grade Calc.png";
+import stock from "../assets/img/stock.jpg";
 
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -22,8 +23,8 @@ export const Projects = () => {
     },
     {
       title: "Worth The Wait",
-      description: "Design & Development",
-      imgUrl: coming_soon,
+      description: "Scrapping & Data Analysis",
+      imgUrl: stock,
     },
     {
       title: "Worth The Wait",

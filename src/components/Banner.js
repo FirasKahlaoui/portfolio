@@ -12,11 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [, setIndex] = useState(1);
-  const toRotate = [
-    "Computer Science Student",
-    "Web Developer",
-    "Minecraft Player",
-  ];
+  const toRotate = ["Big Data Student", "Data Analyst", "Full Stack Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -68,9 +64,9 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <span className="tagline">Assalamou Alaykoum</span>
                   <h1>
-                    {`Hi! I'm Firas`}{" "}
+                    {`Hi! I'm Firas Kahlaoui`}{" "}
                     <span
                       className="txt-rotate"
                       dataperiod="1000"
@@ -82,11 +78,14 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    I take pride in my ability to think outside the box and find
-                    innovative solutions to complex problems. As a leader, I am
-                    able to communicate effectively with my team members and
-                    motivate them towards achieving our common goals. I believe
-                    in working hard and setting high standards for myself.
+                    I'm a skilled data analyst and software developer with
+                    experience in TypeScript and JavaScript, and expertise in
+                    frameworks like React and Node.js. I specialize in big data
+                    and data analysis, and have experience in both web and
+                    mobile development. I'm a quick learner and collaborate
+                    closely with clients to create efficient, scalable, and
+                    user-friendly solutions that solve real-world problems.
+                    Let's work together to bring your ideas to life!
                   </p>
                   <button onClick={() => console.log("connect")}>
                     Download My CV
