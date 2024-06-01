@@ -9,6 +9,11 @@ import python from "../assets/img/icons8-python.svg";
 import php from "../assets/img/icons8-php.svg";
 import c from "../assets/img/icons8-c.svg";
 import java from "../assets/img/icons8-java.svg";
+import hadoop from "../assets/img/apache_hadoop-icon.svg";
+import spark from "../assets/img/apache_spark-icon.svg";
+import r from "../assets/img/r-project-icon.svg";
+import git from "../assets/img/git-scm-icon.svg";
+import docker from "../assets/img/docker-icon.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../assets/img/color-sharp.png";
@@ -96,6 +101,26 @@ export const Skills = () => {
                 <div className="item">
                   <img src={java} alt="Java" />
                   <h5>Java</h5>
+                </div>
+                <div className="item">
+                  <img src={hadoop} alt="Hadoop" />
+                  <h5>Hadoop</h5>
+                </div>
+                <div className="item">
+                  <img src={spark} alt="Spark" />
+                  <h5>Spark</h5>
+                </div>
+                <div className="item">
+                  <img src={r} alt="R" />
+                  <h5>R</h5>
+                </div>
+                <div className="item">
+                  <img src={git} alt="Git" />
+                  <h5>Git</h5>
+                </div>
+                <div className="item">
+                  <img src={docker} alt="Docker" />
+                  <h5>Docker</h5>
                 </div>
               </Carousel>
             </div>
