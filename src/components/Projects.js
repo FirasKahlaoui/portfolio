@@ -27,7 +27,7 @@ export const Projects = () => {
       title: "Worth The Wait",
       description: "Scrapping & Data Analysis",
       imgUrl: stock,
-      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
+      githubLink: "https://github.com/FirasKahlaoui/",
     },
   ];
 
@@ -36,19 +36,19 @@ export const Projects = () => {
       title: "Worth The Wait",
       description: "Design & Development",
       imgUrl: coming_soon,
-      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
+      githubLink: "https://github.com/FirasKahlaoui/",
     },
     {
       title: "Worth The Wait",
       description: "Design & Development",
       imgUrl: coming_soon,
-      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
+      githubLink: "https://github.com/FirasKahlaoui/",
     },
     {
       title: "Worth The Wait",
       description: "Design & Development",
       imgUrl: coming_soon,
-      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
+      githubLink: "https://github.com/FirasKahlaoui/",
     },
   ];
 
@@ -57,19 +57,19 @@ export const Projects = () => {
       title: "Worth The Wait",
       description: "Design & Development",
       imgUrl: coming_soon,
-      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
+      githubLink: "https://github.com/FirasKahlaoui/",
     },
     {
       title: "Worth The Wait",
       description: "Design & Development",
       imgUrl: coming_soon,
-      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
+      githubLink: "https://github.com/FirasKahlaoui/",
     },
     {
       title: "Worth The Wait",
       description: "Design & Development",
       imgUrl: coming_soon,
-      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
+      githubLink: "https://github.com/FirasKahlaoui/",
     },
   ];
 
