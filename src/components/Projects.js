@@ -10,7 +10,7 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
-  const projects = [
+  const first_projects = [
     {
       title: "Grade Claculator",
       description: "React & HTML/CSS",
@@ -29,6 +29,30 @@ export const Projects = () => {
       imgUrl: stock,
       githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
     },
+  ];
+
+  const second_projects = [
+    {
+      title: "Worth The Wait",
+      description: "Design & Development",
+      imgUrl: coming_soon,
+      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
+    },
+    {
+      title: "Worth The Wait",
+      description: "Design & Development",
+      imgUrl: coming_soon,
+      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
+    },
+    {
+      title: "Worth The Wait",
+      description: "Design & Development",
+      imgUrl: coming_soon,
+      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
+    },
+  ];
+
+  const third_projects = [
     {
       title: "Worth The Wait",
       description: "Design & Development",
@@ -63,13 +87,12 @@ export const Projects = () => {
                 >
                   <h2>Projects</h2>
                   <p>
-                    Each project represents a unique journey, where I've
-                    explored cutting-edge technologies, collaborated with
-                    diverse teams, and unleashed my creativity to overcome
-                    challenges. From software solutions that streamline
-                    processes to engineering marvels that push the boundaries of
-                    what's possible, my portfolio showcases my commitment to
-                    making a meaningful impact through technology and design.
+                    Each project in my portfolio embodies a journey of exploring
+                    cutting-edge technologies, collaborating with diverse teams,
+                    and creatively overcoming challenges. From innovative
+                    software solutions to groundbreaking engineering feats, my
+                    work reflects a commitment to impactful technology and
+                    design.
                   </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
@@ -95,33 +118,24 @@ export const Projects = () => {
                     >
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {projects.map((project, index) => {
+                          {first_projects.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <p>
-                          While my portfolio may currently be in its early
-                          stages, my passion and determination to make a
-                          difference in the tech world are stronger than ever. I
-                          am excited to be on the cusp of greatness and embrace
-                          each step of this transformative journey. Instead of
-                          being discouraged by the absence of projects, I view
-                          it as an opportunity to explore new possibilities and
-                          identify areas where I can truly make a unique impact
-                        </p>
+                      <Row>
+                          {second_projects.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>
-                          As an aspiring technologist, I am eager to embark on a
-                          journey of innovation and creativity. While I may not
-                          have a portfolio of projects just yet, my passion for
-                          technology and design is unwavering. I see every
-                          challenge as an opportunity to learn and grow, and I
-                          am committed to making a meaningful impact through my
-                          work.
-                        </p>
+                      <Row>
+                          {third_projects.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>

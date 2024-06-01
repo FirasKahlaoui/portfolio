@@ -36,12 +36,12 @@ export const Footer = () => {
               >
                 <img src={navIcon3} alt="Icon" title="Instagram" />
               </a>
-              <a href="https://twitter.com/firas_kahlaoui" target="blank">
+              <a href="https://x.com/Firas_kahlaouii" target="blank">
                 <img src={navIcon4} alt="Icon" title="Twitter" />
               </a>
               <a href="https://github.com/FirasKahlaoui" target="blank">
-                  <img src={navIcon5} alt="" title="GitHub" />
-                </a>
+                <img src={navIcon5} alt="" title="GitHub" />
+              </a>
             </div>
             <p></p>
           </Col>
