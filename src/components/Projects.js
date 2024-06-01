@@ -15,31 +15,37 @@ export const Projects = () => {
       title: "Grade Claculator",
       description: "React & HTML/CSS",
       imgUrl: grade,
+      githubLink: "https://github.com/FirasKahlaoui/Moy_Calculator_ISAMM",
     },
     {
       title: "Heart Disease Prediction",
       description: "Python & Machine Learning",
       imgUrl: heart,
+      githubLink: "https://github.com/FirasKahlaoui/Heart_Disease_Prediction",
     },
     {
       title: "Worth The Wait",
       description: "Scrapping & Data Analysis",
       imgUrl: stock,
+      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
     },
     {
       title: "Worth The Wait",
       description: "Design & Development",
       imgUrl: coming_soon,
+      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
     },
     {
       title: "Worth The Wait",
       description: "Design & Development",
       imgUrl: coming_soon,
+      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
     },
     {
       title: "Worth The Wait",
       description: "Design & Development",
       imgUrl: coming_soon,
+      githubLink: "https://github.com/FirasKahlaoui/FirasKahlaoui",
     },
   ];
 
