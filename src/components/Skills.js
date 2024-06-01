@@ -14,6 +14,8 @@ import spark from "../assets/img/apache_spark-icon.svg";
 import r from "../assets/img/r-project-icon.svg";
 import git from "../assets/img/git-scm-icon.svg";
 import docker from "../assets/img/docker-icon.svg";
+import firebase from "../assets/img/firebase-icon.svg";
+import bootstrap from "../assets/img/getbootstrap-icon.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../assets/img/color-sharp.png";
@@ -75,6 +77,10 @@ export const Skills = () => {
                   <h5>React</h5>
                 </div>
                 <div className="item">
+                  <img src={bootstrap} alt="Bootstrap" />
+                  <h5>Bootstrap</h5>
+                </div>
+                <div className="item">
                   <img src={node} alt="Node" />
                   <h5>NodeJS</h5>
                 </div>
@@ -121,6 +127,10 @@ export const Skills = () => {
                 <div className="item">
                   <img src={docker} alt="Docker" />
                   <h5>Docker</h5>
+                </div>
+                <div className="item">
+                  <img src={firebase} alt="Firebase" />
+                  <h5>Firebase</h5>
                 </div>
               </Carousel>
             </div>
